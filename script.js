@@ -1,35 +1,40 @@
-// task-01
-const name = prompt('Як вас звати?');
-alert (`Hello, ${name}! How are you?`);
+// HW-03 Task 02
+const birth = prompt('Введіть ваш рік народження');
+const age = 2023 - birth;
+const city = prompt('В якому місті ви живите');
+const sports = prompt('Введіть ваш улюбленний вид спорту')
+if (birth) {
+        alert(`Ваш вік ${age}`)}
+    else
+        alert('Шкода, що Ви не захотіли ввести свій рік народження') 
 
-// task-02
-// const firstNumber = Number(prompt('Введіть перше число'));
-// const secondNumber = Number(prompt('Введіть друге число'));
-// alert (`${firstNumber} + ${secondNumber} = ${firstNumber + secondNumber}
-// ${firstNumber} - ${secondNumber} = ${firstNumber - secondNumber}
-// ${firstNumber} * ${secondNumber} = ${firstNumber * secondNumber}
-// ${firstNumber} / ${secondNumber} = ${firstNumber / secondNumber}`)
+if (city === 'Київ') {
+        alert (`Ти живеш у столиці ${city}`)}
+    else if (city === 'Вашингтон') {
+            alert (`Ти живеш у столиці ${city}`)}
+    else if (city === 'Лондон') {
+                alert (`Ти живеш у столиці ${city}`)}
+    else if (city) {
+        alert (`Ти живеш у місті ${city}`)
+    }else 
+        alert ('Шкода, що Ви не захотіли ввести своє місто');
+   
+    
 
-// task-03
-// const value = prompt('Введіть якесь значення');
-// const _value = prompt('Введіть якесь значення');
-// if (value === _value) {
-//     console.log(true)
-// } else ( console.log(false))
+if(sports === 'Футбол') {
+        alert ('Круто! Хочеш стати Андрієм Шевченко?')
+        }
+    else if(sports === 'Бокс') {
+        alert ('Круто! Хочеш стати Віталієм чи Володимиром Кличко?')
+        }
+    else if(sports === 'Важка атлетика') {
+        alert ('Круто! Хочеш стати Василем Вірастюком?')
+        }
+    else
+        alert ('Шкода, що Ви не захотіли ввести свій улюбленний вид спорту');
 
-// task-04
-// const firstNumber = Number(prompt('Введіть перше число'));
-// const secondNumber = Number(prompt('Введіть друге число'));
-// const thirddNumber = Number(prompt('Введіть друге число'));
-// const midleNumber = firstNumber + secondNumber + thirddNumber / 3;
-// alert(`Середнє арефметичне цих чисел ${midleNumber}`)
 
-//task-05
-// const number = Number(prompt('Введіть пятизначне число'));
-// const lastNumber = number % 10;
-// const fourthNumber = (number % 10) - 1; 
-// const thirdNumber = (number % 10) - 2; 
-// const secondNumber = (number % 10) - 3; 
-// const firstNumber = (number % 10) - 4; 
-// alert (`${lastNumber} ${fourthNumber} ${thirdNumber} ${secondNumber} ${firstNumber}`);
+
+    
+
 
