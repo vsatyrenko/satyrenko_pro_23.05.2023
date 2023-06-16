@@ -1,6 +1,6 @@
 // task-01
-// const name = prompt('Як вас звати?');
-// alert (`Hello, ${name}! How are you?`);
+const name = prompt('Як вас звати?');
+alert (`Hello, ${name}! How are you?`);
 
 // task-02
 // const firstNumber = Number(prompt('Введіть перше число'));
@@ -25,11 +25,11 @@
 // alert(`Середнє арефметичне цих чисел ${midleNumber}`)
 
 //task-05
-const number = Number(prompt('Введіть пятизначне число'));
-const lastNumber = number % 10;
-const fourthNumber = (number % 10) - 1; 
-const thirdNumber = (number % 10) - 2; 
-const secondNumber = (number % 10) - 3; 
-const firstNumber = (number % 10) - 4; 
-alert (`${lastNumber} ${fourthNumber} ${thirdNumber} ${secondNumber} ${firstNumber}`);
+// const number = Number(prompt('Введіть пятизначне число'));
+// const lastNumber = number % 10;
+// const fourthNumber = (number % 10) - 1; 
+// const thirdNumber = (number % 10) - 2; 
+// const secondNumber = (number % 10) - 3; 
+// const firstNumber = (number % 10) - 4; 
+// alert (`${lastNumber} ${fourthNumber} ${thirdNumber} ${secondNumber} ${firstNumber}`);
 
