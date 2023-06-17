@@ -1,40 +1,29 @@
-// HW-03 Task 02
-const birth = prompt('Введіть ваш рік народження');
-const age = 2023 - birth;
-const city = prompt('В якому місті ви живите');
-const sports = prompt('Введіть ваш улюбленний вид спорту')
-if (birth) {
-        alert(`Ваш вік ${age}`)}
-    else
-        alert('Шкода, що Ви не захотіли ввести свій рік народження') 
+//HW-03-task3
+let numOrStr = prompt('input number or string');
+console.log(numOrStr)
+switch (numOrStr) {
+    case null:
+        console.log('ви відмінили');
+        break;
+    case '': 
+        console.log('Empty String');
+        break;
+    case !isNaN(numOrStr) || numOrStr:
+        console.log(' number is Ba_NaN');
+        break;
+ default:
+    console.log('OK!')
+}
 
-if (city === 'Київ') {
-        alert (`Ти живеш у столиці ${city}`)}
-    else if (city === 'Вашингтон') {
-            alert (`Ти живеш у столиці ${city}`)}
-    else if (city === 'Лондон') {
-                alert (`Ти живеш у столиці ${city}`)}
-    else if (city) {
-        alert (`Ти живеш у місті ${city}`)
-    }else 
-        alert ('Шкода, що Ви не захотіли ввести своє місто');
-   
-    
+// let numOrStr = prompt('input number or string');
+// console.log(numOrStr)
 
-if(sports === 'Футбол') {
-        alert ('Круто! Хочеш стати Андрієм Шевченко?')
-        }
-    else if(sports === 'Бокс') {
-        alert ('Круто! Хочеш стати Віталієм чи Володимиром Кличко?')
-        }
-    else if(sports === 'Важка атлетика') {
-        alert ('Круто! Хочеш стати Василем Вірастюком?')
-        }
-    else
-        alert ('Шкода, що Ви не захотіли ввести свій улюбленний вид спорту');
-
-
-
-    
-
-
+// if(numOrStr === null) {
+//     console.log('ви відмінили')
+// } else if( numOrStr.trim() === '' ) {
+//     console.log('Empty String');
+// } else if( isNaN( +numOrStr ) ) {
+//     console.log(' number is Ba_NaN')
+// } else {
+//     console.log('OK!')
+// }
