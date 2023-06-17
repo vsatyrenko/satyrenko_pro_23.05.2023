@@ -7,6 +7,7 @@ const sports = prompt('Введіть ваш улюбленний вид спо�
 let howOld;
 let userCity;
 let typeOfSport;
+
 if (birth) {
     howOld = `Ваш вік ${age}`}
     else
