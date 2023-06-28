@@ -1,10 +1,10 @@
 //Task-01
-// const a = 10;
-// const b = 5;
+const a = 10;
+const b = 5;
 
-// if (a > b) {
-//     console.log(`Число ${a} більше за число ${b}`)
-// };
+if (a > b) {
+    console.log(`Число ${a} більше за число ${b}`)
+};
 
 //Task-02
 // const kilometr = 400;
@@ -96,12 +96,12 @@
 // };
 
 //Task-08
-const num = 123321;
-const num1 = 147741;
+// const num = 123321;
+// const num1 = 147741;
 
-if (num === num1) {
-    console.log('так вони дзеркальні')
-} else {
-    console.log('вони не дзеркальні')
-};
+// if (num === num1) {
+//     console.log('так вони дзеркальні')
+// } else {
+//     console.log('вони не дзеркальні')
+// };
     
