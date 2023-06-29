@@ -42,8 +42,8 @@
 // console.log(`Це число не закінчується парною цифрою це число ${lastNumber}`)
 // };
 
-//Task-05
-// const c = 54;
+// Task-05
+// const c = 45;
 // const b = c % 10;
 // const a = ((c - b)/10)%10;
 
@@ -103,32 +103,32 @@
 // };
 
 //Task-08
-// const num = 123321;
+const num = 123321;
 
-// const lastNumber = num % 10
-// const fivethNumber = ((num - lastNumber)/10)%10;
-// const fourthNumber = ((num - (fivethNumber *10 + lastNumber))/100)%10;
-// const thirdNumber = ((num - (fourthNumber *100 + fivethNumber *10 + lastNumber))/1000)%10;
-// const secondNumber = ((num - (thirdNumber*1000 + fourthNumber *100 + fivethNumber *10 + lastNumber))/10000)%10;
-// const firstNumber = ((num - (secondNumber*10000 + thirdNumber *1000 + fourthNumber *100 + fivethNumber * 10 + lastNumber))/100000)%10;
+const lastNumber = num % 10
+const fivethNumber = ((num - lastNumber)/10)%10;
+const fourthNumber = ((num - (fivethNumber *10 + lastNumber))/100)%10;
+const thirdNumber = ((num - (fourthNumber *100 + fivethNumber *10 + lastNumber))/1000)%10;
+const secondNumber = ((num - (thirdNumber*1000 + fourthNumber *100 + fivethNumber *10 + lastNumber))/10000)%10;
+const firstNumber = ((num - (secondNumber*10000 + thirdNumber *1000 + fourthNumber *100 + fivethNumber * 10 + lastNumber))/100000)%10;
 
-// if (firstNumber,secondNumber,thirdNumber === fourthNumber,fivethNumber,lastNumber) {
-//     console.log('так вони дзеркальні')
-// } else {
-//     console.log('вони не дзеркальні')
-// };
+if (firstNumber && secondNumber && thirdNumber &&  fourthNumber && fivethNumber && lastNumber) {
+    console.log('так вони дзеркальні')
+} else {
+    console.log('вони не дзеркальні')
+};
     
-// const num1 = 147741;
+const num1 = 147741;
 
-// const _lastNumber = num1 % 10
-// const _fivethNumber = ((num1 - _lastNumber)/10)%10;
-// const _fourthNumber = ((num1 - (_fivethNumber *10 + _lastNumber))/100)%10;
-// const _thirdNumber = ((num1 - (_fourthNumber *100 + _fivethNumber *10 + _lastNumber))/1000)%10;
-// const _secondNumber = ((num1 - (_thirdNumber*1000 + _fourthNumber *100 + _fivethNumber *10 + _lastNumber))/10000)%10;
-// const _firstNumber = ((num1 - (_secondNumber*10000 + _thirdNumber *1000 + _fourthNumber *100 + _fivethNumber * 10 + _lastNumber))/100000)%10;
+const _lastNumber = num1 % 10
+const _fivethNumber = ((num1 - _lastNumber)/10)%10;
+const _fourthNumber = ((num1 - (_fivethNumber *10 + _lastNumber))/100)%10;
+const _thirdNumber = ((num1 - (_fourthNumber *100 + _fivethNumber *10 + _lastNumber))/1000)%10;
+const _secondNumber = ((num1 - (_thirdNumber*1000 + _fourthNumber *100 + _fivethNumber *10 + _lastNumber))/10000)%10;
+const _firstNumber = ((num1 - (_secondNumber*10000 + _thirdNumber *1000 + _fourthNumber *100 + _fivethNumber * 10 + _lastNumber))/100000)%10;
 
-// if (_firstNumber,_secondNumber,_thirdNumber === _fourthNumber,_fivethNumber,_lastNumber) {
-//     console.log('так вони дзеркальні')
-// } else {
-//     console.log('вони не дзеркальні')
-// };
+if (_firstNumber && _secondNumber && _thirdNumber && _fourthNumber && _fivethNumber && _lastNumber) {
+    console.log('так вони дзеркальні')
+} else {
+    console.log('вони не дзеркальні')
+};
