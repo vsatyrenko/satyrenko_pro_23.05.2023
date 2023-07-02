@@ -1,134 +1,105 @@
-//Task-01
-// const a = 10;
-// const b = 5;
+//Taks-01
 
-// if (a > b) {
-//     console.log(`Число ${a} більше за число ${b}`)
-// };
+// let cycle = '';
 
-//Task-02
-// const kilometr = 400;
-// const pound = 2 * 0.305 * 1000;
+// for (i = 10; i <= 20; i++) {
+//     cycle += (i +(i < 20 ? ',' : ''));
+// }
+// console.log(cycle);
 
-// if (kilometr < pound) {
-//     console.log(` Відстань ${kilometr} кілометрів меньша за відстань ${pound} фунтів`)
-// } else {
-//     console.log(`Відстань ${pound} фунтів більша за відстань ${kilometr} кілометрів`)
-// };
+//Taks-02
+
+// for (let i = 10; i <= 20; i++) {
+//     console.log(i*i)
+// }
 
 //Task-03
-// const a = 30;
-// const b = 5;
-// if (a % b === 0)  {
-//     console.log('так ділиться')
-// } else {
-//     console.log('не ділиться')
-// };
 
-// const _b = 5;
-// const _a = 30;
-// if (_b % _a === 0)  {
-//     console.log('так ділиться')
-// } else {
-//     console.log('не ділиться')
-// };
+// let a = '';
+
+// for ( i = 7; i <= 7; i++ ) {
+//     for (j = 1; j <= 10; j++)
+//     a += i + ' * ' + j + ' = ' + (i * j) + ' ; ';
+// }
+
+// console.log(a);
 
 //Task-04
-// const number = 1234;
-// lastNumber = number % 10;
-// if(lastNumber % 2 === 0) {
-// console.log(`Це число закінчується парною цифрою ${lastNumber}`)
-// }else {
-// console.log(`Це число не закінчується парною цифрою це число ${lastNumber}`)
-// };
+// let sum = 0;
+// for( let i = 1; i <= 15; i++ ) {
+//   sum += i;
+// }
 
-// Task-05
-// const c = 45;
-// const b = c % 10;
-// const a = ((c - b)/10)%10;
+// console.log( sum );
 
-// if (a > b) {
-//     console.log('перше число більше')
+//Task-05
 
-//  } else {
-//     console.log('друге число більше')
-//  };
-
-//Task-06
-// const num = 123;
-// const num3 = num % 10;
-// const num2 = ((num - num3)/10) % 10;
-// const num1 = ((num -(num2 * 10 + num3))/100) % 10;
-// const summa = num1 + num2 + num3
-
-//  if(summa % 2 === 0) {
-//     console.log('сума парна')
-//  } else {
-//     console.log('сумма не парна')
-// };
-
-// const number = 123;
-// const c = number % 10;
-// const b = ((number - c)/10) % 10;
-// const a = ((number -(b * 10 + c))/100) % 10;
-// const summa = a + b + c;
-
-// if (summa % 5 === 0) {
-//     console.log('кратне 5')
-// } else {
-//     console.log('не кратне 5')
-// };
-
-// const c = 123;
-// const d = c % 10;
-// const b = ((c - d)/10) % 10;
-// const a = ((c -(b * 10 + d))/100) % 10;
-
-// if(a * b * d > 100 ) {
-//     console.log('більше 100')
-// } else {
-//     console.log('не більше 100')
-// };
-
-//Task-07 
-// const num = 654;
-// const num3 = num % 10;
-// const num2 = ((num - num3)/10) % 10;
-// const num1 = ((num -(num2 * 10 + num3))/100) % 10;
-
-// if (num1 === num2 === num3) {
-//     console.log('так правда є однакові')
-// } else {
-//     console.log('ні не правда не має однакових')
-// };
-
-//Task-08
-const num = 123321;
-
-const lastNumber = num % 10
-const fivethNumber = ((num - lastNumber)/10)%10;
-const fourthNumber = ((num - (fivethNumber *10 + lastNumber))/100)%10;
-const thirdNumber = ((num - (fourthNumber *100 + fivethNumber *10 + lastNumber))/1000)%10;
-const secondNumber = ((num - (thirdNumber*1000 + fourthNumber *100 + fivethNumber *10 + lastNumber))/10000)%10;
-const firstNumber = ((num - (secondNumber*10000 + thirdNumber *1000 + fourthNumber *100 + fivethNumber * 10 + lastNumber))/100000)%10;
-
-if (firstNumber === lastNumber && secondNumber === fivethNumber && thirdNumber === fourthNumber) {
-    console.log('так вони дзеркальні')
-} else {
-    console.log('вони не дзеркальні')
-};
+// let result = 15;
+ 
+// for(let i = 15; i <= 35; i++){
+//     result *=  i;
     
-const num1 = 147741;
+// }
+// console.log(result);
 
-const _lastNumber = num1 % 10
-const _fivethNumber = ((num1 - _lastNumber)/10)%10;
-const _fourthNumber = ((num1 - (_fivethNumber *10 + _lastNumber))/100)%10;
-const _thirdNumber = ((num1 - (_fourthNumber *100 + _fivethNumber *10 + _lastNumber))/1000)%10;
-const _secondNumber = ((num1 - (_thirdNumber*1000 + _fourthNumber *100 + _fivethNumber *10 + _lastNumber))/10000)%10;
-const _firstNumber = ((num1 - (_secondNumber*10000 + _thirdNumber *1000 + _fourthNumber *100 + _fivethNumber * 10 + _lastNumber))/100000)%10;
+//Task-06 
 
-if (_firstNumber === _lastNumber && _secondNumber === _fivethNumber && _thirdNumber === _fourthNumber) {
-    console.log('так вони дзеркальні')
-} else {
-    console.log('вони не дзеркальні')
-};
+// let n = 500;
+
+// let a = 0;
+
+// for (let i = 1; i <= n; i++) {
+//     a += i;
+// }
+// a /= n
+
+// console.log(a);
+
+//Task-07
+
+// let num = 0;
+
+// for (i = 30; i <= 80; i++) {
+//     if(i % 2 === 0)
+//     num += i;
+// }
+// console.log(num);
+
+//Tals-08
+
+// for (i = 100; i <= 200; i++) {
+//     console.log(i)
+// }
+
+//Task-09
+
+// let naturalNumber = 20;
+// console.log(`В веденне число ${naturalNumber}`)
+
+// let evenDivisor = 0;
+// let sum = 0;
+
+// for (i = 2; i * 2 <= naturalNumber; i++) {
+//     if(naturalNumber % i == 0) {
+//         console.log(`Його дільники це: ${i}`)
+
+//         if (i % 2 === 0) {
+//             evenDivisor++;
+//             sum += i;
+//         }
+//     }
+// }
+
+// console.log(`Кількість парних дільників ${evenDivisor}`);
+// console.log(`Cумма парних дільників ${sum}`);
+
+//Task-10
+
+let a = '';
+
+for ( i = 1; i <= 10; i++ ) {
+    for (j = 1; j <= 10; j++)
+    a += i + ' * ' + j + ' = ' + (i * j) + '; ';
+}
+
+console.log(a);
