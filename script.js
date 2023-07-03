@@ -15,14 +15,13 @@
 
 //Task-03
 
-// let a = '';
+let a = '';
 
-// for ( i = 7; i <= 7; i++ ) {
-//     for (j = 1; j <= 10; j++)
-//     a += i + ' * ' + j + ' = ' + (i * j) + ' ; ';
-// }
+for ( i = 7; i <= 7; i++ ) {
+    for (j = 1; j <= 10; j++)
+    console.log(`${i} x ${j} = ${i * j}`);
+}
 
-// console.log(a);
 
 //Task-04
 // let sum = 0;
@@ -95,11 +94,9 @@
 
 //Task-10
 
-let a = '';
+// let a = '';
 
-for ( i = 1; i <= 10; i++ ) {
-    for (j = 1; j <= 10; j++)
-    a += i + ' * ' + j + ' = ' + (i * j) + '; ';
-}
-
-console.log(a);
+// for ( i = 1; i <= 10; i++ ) {
+//     for (j = 1; j <= 10; j++)
+//     console.log(`${i} x ${j} = ${i * j}`);
+// }
