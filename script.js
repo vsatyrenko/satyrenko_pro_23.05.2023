@@ -15,11 +15,9 @@
 
 //Task-03
 
-let a = '';
-
 for ( i = 7; i <= 7; i++ ) {
-    for (j = 1; j <= 10; j++)
-    console.log(`${i} x ${j} = ${i * j}`);
+    for (j = 1; j <= 10; j++){
+    console.log(`${i} x ${j} = ${i * j}`);}
 }
 
 
@@ -56,13 +54,13 @@ for ( i = 7; i <= 7; i++ ) {
 
 //Task-07
 
-// let num = 0;
+let num = 0;
 
-// for (i = 30; i <= 80; i++) {
-//     if(i % 2 === 0)
-//     num += i;
-// }
-// console.log(num);
+for (i = 30; i <= 80; i++) {
+    if(i % 2 === 0) {
+     num += i;}  
+}
+console.log(num);
 
 //Tals-08
 
@@ -92,11 +90,9 @@ for ( i = 7; i <= 7; i++ ) {
 // console.log(`Кількість парних дільників ${evenDivisor}`);
 // console.log(`Cумма парних дільників ${sum}`);
 
-//Task-10
+// Task-10
 
-// let a = '';
-
-// for ( i = 1; i <= 10; i++ ) {
-//     for (j = 1; j <= 10; j++)
-//     console.log(`${i} x ${j} = ${i * j}`);
-// }
+for ( i = 1; i <= 10; i++ ) {
+    for (j = 1; j <= 10; j++) {
+    console.log(`${i} x ${j} = ${i * j}`);}  
+}
