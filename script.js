@@ -1,98 +1,42 @@
-//Taks-01
-
-// let cycle = '';
-
-// for (i = 10; i <= 20; i++) {
-//     cycle += (i +(i < 20 ? ',' : ''));
-// }
-// console.log(cycle);
-
-//Taks-02
-
-// for (let i = 10; i <= 20; i++) {
-//     console.log(i*i)
-// }
-
-//Task-03
-
-for ( i = 7; i <= 7; i++ ) {
-    for (j = 1; j <= 10; j++){
-    console.log(`${i} x ${j} = ${i * j}`);}
-}
-
-
-//Task-04
-// let sum = 0;
-// for( let i = 1; i <= 15; i++ ) {
-//   sum += i;
-// }
-
-// console.log( sum );
-
-//Task-05
-
-// let result = 15;
- 
-// for(let i = 15; i <= 35; i++){
-//     result *=  i;
+const arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
     
-// }
-// console.log(result);
+const positiveElement = arr.filter(function(el) { 
+    return el > 0;
+});
+const sum = positiveElement.reduce(function(item,element) {
+  return item + element
+});
+const minElement = Math.min(...arr);
+const minElementIndex = arr.indexOf(minElement);
+const maxElement = Math.max(...arr);
+const maxElementIndex = arr.indexOf(maxElement);
+const negativElement = arr.filter(function(el)
+{return el < 0});
+const oddPositiveElements = arr.filter(function(el)
+{return el > 0 && el % 2 != 0});
+const pairedPositiveElements = arr.filter(function(el)
+{return el > 0 && el % 2 == 0});
+const sumOfEven = pairedPositiveElements.reduce(function(item,element) 
+{return item + element });
+const sumOfOdd = oddPositiveElements.reduce(function(item,element) 
+{return item + element });
+const productPositiveElements = positiveElement.reduce(function(item,element) 
+{return item * element });
+const max = Math.max(...arr);
+const result = arr.map(function(el) {
+    return el == max ? el : 0 
+});
 
-//Task-06 
-
-// let n = 500;
-
-// let a = 0;
-
-// for (let i = 1; i <= n; i++) {
-//     a += i;
-// }
-// a /= n
-
-// console.log(a);
-
-//Task-07
-
-let num = 0;
-
-for (i = 30; i <= 80; i++) {
-    if(i % 2 === 0) {
-     num += i;}  
-}
-console.log(num);
-
-//Tals-08
-
-// for (i = 100; i <= 200; i++) {
-//     console.log(i)
-// }
-
-//Task-09
-
-// let naturalNumber = 20;
-// console.log(`В веденне число ${naturalNumber}`)
-
-// let evenDivisor = 0;
-// let sum = 0;
-
-// for (i = 2; i * 2 <= naturalNumber; i++) {
-//     if(naturalNumber % i == 0) {
-//         console.log(`Його дільники це: ${i}`)
-
-//         if (i % 2 === 0) {
-//             evenDivisor++;
-//             sum += i;
-//         }
-//     }
-// }
-
-// console.log(`Кількість парних дільників ${evenDivisor}`);
-// console.log(`Cумма парних дільників ${sum}`);
-
-// Task-10
-
-for ( i = 1; i <= 10; i++ ) {
-    for (j = 1; j <= 10; j++) {
-    console.log(`${i} x ${j} = ${i * j}`);}  
-}
+console.log(`Сумма масиву: ${sum}
+Кількість позитивних елементів: ${positiveElement.length}
+Мінімальний елемент масиву: ${minElement}
+Його порядковий номер: ${minElementIndex}
+Максимальний елемент масиву: ${maxElement}
+Його порядковий номер: ${maxElementIndex}
+Кількість негативних елементів: ${negativElement.length}
+Кількість непарних позитивних елементів: ${oddPositiveElements.length}
+Кількість парних позитивних елементів: ${pairedPositiveElements.length}
+Сума парних позитивних елементів: ${sumOfEven}
+Сума непарних позитивних елементів: ${sumOfOdd}
+Добуток позитивних елементів: ${productPositiveElements}
+Найбільший серед елементів масиву інші обнуленні: ${max} ${result} `);
