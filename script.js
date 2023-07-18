@@ -1,42 +1,74 @@
-const arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-    
-const positiveElement = arr.filter(function(el) { 
-    return el > 0;
-});
-const sum = positiveElement.reduce(function(item,element) {
-  return item + element
-});
-const minElement = Math.min(...arr);
-const minElementIndex = arr.indexOf(minElement);
-const maxElement = Math.max(...arr);
-const maxElementIndex = arr.indexOf(maxElement);
-const negativElement = arr.filter(function(el)
-{return el < 0});
-const oddPositiveElements = arr.filter(function(el)
-{return el > 0 && el % 2 != 0});
-const pairedPositiveElements = arr.filter(function(el)
-{return el > 0 && el % 2 == 0});
-const sumOfEven = pairedPositiveElements.reduce(function(item,element) 
-{return item + element });
-const sumOfOdd = oddPositiveElements.reduce(function(item,element) 
-{return item + element });
-const productPositiveElements = positiveElement.reduce(function(item,element) 
-{return item * element });
-const max = Math.max(...arr);
-const result = arr.map(function(el) {
-    return el == max ? el : 0 
-});
+let users = [
+    {
+    "index": 0,
+    "isActive": true,
+    "balance": "$2,226.60",
+    "name": "Eugenia Sawyer",
+    "gender": "female",
+    "phone": "+1 (840) 583-3207",
+    "address": "949 John Street, Rose, Puerto Rico, 1857"
+    },
+    {
+    "index": 1,
+    "isActive": true,
+    "balance": "$2,613.77",
+    "name": "Pauline Gallegos",
+    "gender": "female",
+    "phone": "+1 (985) 593-3328",
+    "address": "328 Greenpoint Avenue, Torboy, North Dakota, 6857"
+    },
+    {
+    "index": 2,
+    "isActive": false,
+    "balance": "$3,976.41",
+    "name": "Middleton Chaney",
+    "gender": "male",
+    "phone": "+1 (995) 591-2478",
+    "address": "807 Fleet Walk, Brutus, Arkansas, 9783"
+    },
+    {
+    "index": 3,
+    "isActive": true,
+    "balance": "$1,934.58",
+    "name": "Burns Poole",
+    "gender": "male",
+    "phone": "+1 (885) 559-3422",
+    "address": "730 Seba Avenue, Osage, Alabama, 6290"
+    },
+    {
+    "index": 4,
+    "isActive": true,
+    "balance": "$3,261.65",
+    "name": "Mcfadden Horne",
+    "gender": "male",
+    "phone": "+1 (942) 565-3988",
+    "address": "120 Scholes Street, Kirk, Michigan, 1018"
+    },
+    {
+    "index": 5,
+    "isActive": false,
+    "balance": "$1,790.56",
+    "name": "Suzette Lewis",
+    "gender": "female",
+    "phone": "+1 (837) 586-3283",
+    "address": "314 Dunne Place, Bawcomville, Guam, 9053"
+    }
+    ];
 
-console.log(`Сумма масиву: ${sum}
-Кількість позитивних елементів: ${positiveElement.length}
-Мінімальний елемент масиву: ${minElement}
-Його порядковий номер: ${minElementIndex}
-Максимальний елемент масиву: ${maxElement}
-Його порядковий номер: ${maxElementIndex}
-Кількість негативних елементів: ${negativElement.length}
-Кількість непарних позитивних елементів: ${oddPositiveElements.length}
-Кількість парних позитивних елементів: ${pairedPositiveElements.length}
-Сума парних позитивних елементів: ${sumOfEven}
-Сума непарних позитивних елементів: ${sumOfOdd}
-Добуток позитивних елементів: ${productPositiveElements}
-Найбільший серед елементів масиву інші обнуленні: ${max} ${result} `);
+
+const arr = [];
+let sumElement = 0
+
+for (let i = 0; i < users.length; i++) {
+    const str = users[i].balance;
+    const arr2 = str.slice(1).split('');
+    const remove = arr2.splice(1,1);
+    const num = Number(arr2.join(''));
+    if (num > 2000) {
+        arr.push(users[i].phone);
+    }
+    sumElement += num;
+};
+
+ console.log(arr)
+ console.log(`Сума всіх балансів: $${sumElement}`)
