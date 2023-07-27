@@ -12,7 +12,7 @@ const delet = array.splice(2,5);
 
 console.log(delet);
 
-console.log(` vbfdhjbhj${array}`);
+console.log(array);
 
 
 
