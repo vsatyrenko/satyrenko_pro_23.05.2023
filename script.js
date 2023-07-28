@@ -1,19 +1,16 @@
-const array =  [ ]; 
-const size = prompt('Введіть довжину масива');
-for ( let i = 0; i < size; i ++)  {
-	array [ i ]  =  prompt ( ' Введіть елементи '  +  ( i + 1 )); 
+const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+
+function generateKey (length) {
+
+// let charactersLength = characters.length;
+let randomElements =  '';
+for (let i = 0; i <= length; i++) {
+    let random = Math.floor(Math.random() * characters.length);
+    randomElements += characters[random] 
+    }
+    return randomElements;
 }
-console.log (array);
 
-const sort = array.sort();
-console.log(sort);
-
-const delet = array.splice(2,5);
-
-console.log(delet);
-
-console.log(array);
-
-
-
+const key = generateKey(15, characters);
+console.log(key);
 
