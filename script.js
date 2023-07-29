@@ -1,8 +1,6 @@
 const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
-function generateKey (length) {
-
-// let charactersLength = characters.length;
+function generateKey (length,characters) {
 let randomElements =  '';
 for (let i = 0; i <= length; i++) {
     let random = Math.floor(Math.random() * characters.length);
