@@ -81,12 +81,8 @@ const string = getString();
 const getLetterArr = () => {
   const arr = [];
   const letter = prompt("Write a letter", "");
-  if (letter === "" || letter === null || letter === undefined) {
-    return arr;
-  } else {
-    arr.push(letter);
-    return arr.concat(getLetterArr());
-  }
+  arr.push(letter);
+  return arr;
 };
 
 const letterArr = getLetterArr();
