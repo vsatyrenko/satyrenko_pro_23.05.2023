@@ -1,12 +1,16 @@
-const calcSum = () => {
-  let sum = 0;
-  return function (num) {
-    sum += num;
-    return sum;
-  };
+let ladder = {
+  step: 0,
+  up: function () {
+    this.step++;
+    return this;
+  },
+  down: function () {
+    this.step--;
+    return this;
+  },
+  showStep: function () {
+    alert(this.step);
+    return this;
+  },
 };
-
-const sumFunction = calcSum();
-console.log(sumFunction(3));
-console.log(sumFunction(5));
-console.log(sumFunction(20));
+ladder.up().up().down().showStep();
