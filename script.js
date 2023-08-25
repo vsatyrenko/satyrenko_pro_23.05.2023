@@ -1,97 +1,89 @@
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
+class Student {
+  constructor(lastName, firstName, birthDate) {
+    this.lastName = lastName;
+    this.firstName = firstName;
+    this.birthDate = birthDate;
   }
-  personInfo() {
-    return {
-      Name: this.name,
-      Age: this.age,
-    };
-  }
-}
-const personTom = new Person("Tom", 30);
-const personJohn = new Person("John", 25);
+  grades = new Array(25).fill(undefined);
+  attendance = new Array(25).fill(undefined);
 
-class Auto {
-  constructor(brand, model, date, numberplate) {
-    this.brand = brand;
-    this.model = model;
-    this.date = date;
-    this.numberplate = numberplate;
-    this.owner = null;
+  getStudentAge() {
+    const studentAge = 2023 - this.birthDate;
+    return `Вік студента ${this.lastName} ${studentAge}`;
   }
-  setOwner(owner) {
-    if (owner instanceof Person && owner.age > 18) {
-      this.owner = owner;
-    } else {
-      console.log("Your age is under 18");
+
+  calcAverageGrade() {
+    const gradesSum = this.grades.reduce((sum, current) => sum + current, 0);
+    return Math.round(gradesSum / this.grades.length);
+  }
+
+  present(grade) {
+    const empty = this.grades.findIndex((value) => value === undefined);
+    if (empty !== -1 && empty < 25) {
+      this.grades[empty] = grade;
+      this.attendance[empty] = true;
     }
   }
-  getFullInfo() {
-    console.log({
-      brand: this.brand,
-      model: this.model,
-      date: this.date,
-      numberplate: this.numberplate,
-      owner: this.owner ? this.owner.personInfo() : "This car has no owner",
-    });
+
+  absent() {
+    const empty = this.grades.findIndex((value) => value === undefined);
+    if (empty !== -1 && empty < 25) {
+      this.grades[empty] = 0;
+      this.attendance[empty] = false;
+    }
+  }
+
+  summary() {
+    const averageGrade = this.calcAverageGrade();
+    const attendedLessons = this.attendance.filter(
+      (attended) => attended
+    ).length;
+    const attendanceRating = attendedLessons / this.attendance.length;
+
+    if (averageGrade > 90 && attendanceRating > 0.9) {
+      return "Молодець!";
+    } else if (averageGrade > 90 || attendanceRating > 0.9) {
+      return "Добре, але можна краще";
+    } else {
+      return "Редиска!";
+    }
+  }
+
+  getArr() {
+    console.log(this.grades);
+    console.log(this.attendance);
   }
 }
-const toyotaCar = new Auto("Toyota", "Camry", "2022", "ST2971");
-const hondatCar = new Auto("Honda", "CR-V", "2023", "ST1792");
 
-toyotaCar.setOwner(personTom);
-toyotaCar.getFullInfo();
-
-hondatCar.setOwner(personJohn);
-hondatCar.getFullInfo();
-
-//
-function Persona(name, age) {
-  this.name = name;
-  this.age = age;
-
-  this.personInfo = () => {
-    return {
-      Name: this.name,
-      Age: this.age,
-    };
-  };
+function getRandomGrade(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function Car(brand, model, date, numberplate) {
-  this.brand = brand;
-  this.model = model;
-  this.date = date;
-  this.numberplate = numberplate;
-  this.owner = null;
+const getGradeAndAttandance = (student, attended, missed, min, max) => {
+  for (let i = 0; i < attended; i++) {
+    student.present(getRandomGrade(min, max));
+  }
+  for (let i = 0; i < missed; i++) {
+    student.absent();
+  }
+};
+const studentBob = new Student("Bob", "Homer", 2000);
 
-  this.setOwner = (owner) => {
-    if (owner instanceof Persona && owner.age > 18) {
-      this.owner = owner;
-    } else {
-      console.log("Your age is under 18");
-    }
-  };
+getGradeAndAttandance(studentBob, 25, 0, 94, 100);
+console.log(studentBob.getStudentAge());
+console.log("Середня оцінка студента:" + studentBob.calcAverageGrade());
+console.log(studentBob.summary());
 
-  this.getFullInfo = function () {
-    console.log({
-      brand: this.brand,
-      model: this.model,
-      date: this.date,
-      numberplate: this.numberplate,
-      owner: this.owner ? this.owner.personInfo() : "This car has no owner",
-    });
-  };
-}
+const studentJohn = new Student("John", "Santos", 2001);
+getGradeAndAttandance(studentJohn, 20, 5, 65, 84);
 
-const personTrevor = new Persona("Trevor", 25);
-const hondaJazz = new Car("Honda", "Jazz", "2018", "ST7771");
-hondaJazz.setOwner(personTrevor);
-hondaJazz.getFullInfo();
+console.log(studentJohn.getStudentAge());
+console.log("Середня оцінка студента:" + studentJohn.calcAverageGrade());
+console.log(studentJohn.summary());
 
-const personMaria = new Persona("Maria", 18);
-const toyotaCamry = new Car("Toyota", "Camry", "2020", "ST6662");
-toyotaCamry.setOwner(personMaria);
-toyotaCamry.getFullInfo();
+const studentBritny = new Student("Britny", "Spirs", 1999);
+getGradeAndAttandance(studentBritny, 23, 2, 91, 98);
+
+console.log(studentBritny.getStudentAge());
+console.log("Середня оцінка студента:" + studentBritny.calcAverageGrade());
+console.log(studentBritny.summary());
