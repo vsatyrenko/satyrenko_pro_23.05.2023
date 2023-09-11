@@ -1,18 +1,6 @@
-const table = document.createElement("table");
+const imageIndex = Math.floor(Math.random() * 9) + 1;
 
-let cellCounter = 1;
+const randomImg = document.createElement("img");
+randomImg.src = `/image/image${imageIndex}.jpg`;
 
-for (let i = 0; i < 10; i++) {
-  const row = document.createElement("tr");
-
-  for (let j = 0; j < 10; j++) {
-    const cell = document.createElement("td");
-    cell.innerText = cellCounter;
-    row.appendChild(cell);
-    cellCounter++;
-  }
-
-  table.appendChild(row);
-}
-
-document.body.appendChild(table);
+document.body.appendChild(randomImg);
