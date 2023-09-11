@@ -1,24 +1,41 @@
-const textInput = document.createElement("input");
+const firstLinkButton = document.createElement("button");
+const secondLinkButton = document.createElement("button");
 
-textInput.setAttribute("type", "text");
-textInput.style = "border: 1px solid #000;";
+const firstLink = document.createElement("a");
+const secondLink = document.createElement("a");
 
-textInput.classList.add("textInput");
+firstLinkButton.innerText = "First website";
+secondLinkButton.innerText = "Second website";
 
-document.body.appendChild(textInput);
+const firstUserLink = prompt("Введите первую ссылку", "");
+const secondUserLink = prompt("Введите вторую ссылку", "");
 
-const someDiv = document.createElement("div");
-someDiv.classList.add("someDiv");
-someDiv.style = "display: none";
+function isProtocol(link) {
+  if (link && !link.startsWith("http://") && !link.startsWith("https://")) {
+    return `http://${link}`;
+  }
+  return link;
+}
 
-document.body.appendChild(someDiv);
+firstLink.setAttribute("href", isProtocol(firstUserLink));
+secondLink.setAttribute("href", isProtocol(secondUserLink));
 
-textInput.addEventListener("focus", () => {
-  someDiv.style =
-    "display: inline-block; border: 1px solid #000;  width: 100px; height: 50px; margin: 0 0 0 20px";
-  someDiv.innerText = "Text";
+firstLinkButton.appendChild(firstLink);
+secondLinkButton.appendChild(secondLink);
+
+document.body.appendChild(firstLinkButton);
+document.body.appendChild(secondLinkButton);
+
+firstLinkButton.addEventListener("click", () => {
+  const link = firstLink.getAttribute("href");
+  if (link) {
+    window.location.href = link;
+  }
 });
 
-textInput.addEventListener("blur", () => {
-  someDiv.style = "display: none;";
+secondLinkButton.addEventListener("click", () => {
+  const link = secondLink.getAttribute("href");
+  if (link) {
+    window.location.href = link;
+  }
 });
