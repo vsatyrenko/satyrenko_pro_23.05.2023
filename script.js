@@ -1,6 +1,24 @@
-const imageIndex = Math.floor(Math.random() * 9) + 1;
+const textInput = document.createElement("input");
 
-const randomImg = document.createElement("img");
-randomImg.src = `/image/image${imageIndex}.jpg`;
+textInput.setAttribute("type", "text");
+textInput.style = "border: 1px solid #000;";
 
-document.body.appendChild(randomImg);
+textInput.classList.add("textInput");
+
+document.body.appendChild(textInput);
+
+const someDiv = document.createElement("div");
+someDiv.classList.add("someDiv");
+someDiv.style = "display: none";
+
+document.body.appendChild(someDiv);
+
+textInput.addEventListener("focus", () => {
+  someDiv.style =
+    "display: inline-block; border: 1px solid #000;  width: 100px; height: 50px; margin: 0 0 0 20px";
+  someDiv.innerText = "Text";
+});
+
+textInput.addEventListener("blur", () => {
+  someDiv.style = "display: none;";
+});
