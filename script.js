@@ -1,41 +1,16 @@
-const firstLinkButton = document.createElement("button");
-const secondLinkButton = document.createElement("button");
+const GOOGLE_URL = "http://www.google.com";
 
-const firstLink = document.createElement("a");
-const secondLink = document.createElement("a");
+const userUrl = prompt("Укажите ссылку для перехода: ");
 
-firstLinkButton.innerText = "First website";
-secondLinkButton.innerText = "Second website";
+const userButton = document.getElementById("user-button");
+userButton.addEventListener("click", () => redirectToUrl(userUrl));
 
-const firstUserLink = prompt("Введите первую ссылку", "");
-const secondUserLink = prompt("Введите вторую ссылку", "");
+const googleButton = document.getElementById("google-button");
+googleButton.addEventListener("click", () => redirectToUrl(GOOGLE_URL));
 
-function isProtocol(link) {
-  if (link && !link.startsWith("http://") && !link.startsWith("https://")) {
-    return `http://${link}`;
+function redirectToUrl(url) {
+  if (!url.startsWith("http://") || !url.startsWith("https://")) {
+    url = "http://" + url;
   }
-  return link;
+  window.location.href = url;
 }
-
-firstLink.setAttribute("href", isProtocol(firstUserLink));
-secondLink.setAttribute("href", isProtocol(secondUserLink));
-
-firstLinkButton.appendChild(firstLink);
-secondLinkButton.appendChild(secondLink);
-
-document.body.appendChild(firstLinkButton);
-document.body.appendChild(secondLinkButton);
-
-firstLinkButton.addEventListener("click", () => {
-  const link = firstLink.getAttribute("href");
-  if (link) {
-    window.location.href = link;
-  }
-});
-
-secondLinkButton.addEventListener("click", () => {
-  const link = secondLink.getAttribute("href");
-  if (link) {
-    window.location.href = link;
-  }
-});
